@@ -775,4 +775,9 @@ test('The rooRuleName option may start with "@"', () => {
   })
 })
 
+test('Test :hover CSS pseudo-class and slotted ', ()=>{
+  run('::slotted(p){ &:hover { color: red } }', '::slotted(p:hover) { color: red }')
+})
+
+
 test.run()
